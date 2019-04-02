@@ -3,10 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>webpack starterkit</title>
+  <title>Enter Album</title>
 </head>
 <body>
-  <h1>webpack starter</h1>
-  <p>✨ A lightweight foundation for your next webpack based frontend project.</p>
+  <h1>Enter Album</h1>
+  <form action="/updateAlbum" method="POST" id="update-album-form">
+    <input name="albumartist" placeholder="AlbumArtist"/>
+    <input name="albumtitle" placeholder="AlbumTitle"/>
+    </br>
+    <input name="artist" placeholder="Artist">
+    <input name="title" placeholder="Title">
+    <input name="length" placeholder="Length">
+    <input name="tracknum" placeholder="Tracknum">
+    <input name="version" placeholder="Version">
+    <input name="timesig" placeholder="Time Signature">
+    <input name="beatmixable" placeholder="Beat Mixable">
+    <input name="keystart" placeholder="Key Start">
+    <input name="keyend" placeholder="Key End">
+    <input name="bpmstart" placeholder="BPM Start">
+    <input name="bpmend" placeholder="BPM End">
+    <input name="rating" placeholder="Rating">
+    <input name="category" placeholder="Category">
+    <input name="releaseyear" placeholder="Release Year">
+    <input name="comment" placeholder="Comment">
+    </br>
+    <button type="submit">Submit</button>
+  </form>
 </body>
 </html>

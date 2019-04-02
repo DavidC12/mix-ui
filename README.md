@@ -1,3 +1,8 @@
+# Mix-UI webapp
+##Album Creation
+http://localhost:8089/createAlbum
+Requires soapui local mock service to be started
+
 # Webpack Frontend Starterkit
 
 A lightweight foundation for your next webpack based frontend project.
@@ -23,7 +28,7 @@ npm run build
 
 ### Features:
 
-* ES6 Support via [babel](https://babeljs.io/) (v7)
+* ES6 Support via [babel](https://babeljs.io/) (v7) (Disabled)
 * SASS Support via [sass-loader](https://github.com/jtangelder/sass-loader)
 * Linting via [eslint-loader](https://github.com/MoOx/eslint-loader)
 

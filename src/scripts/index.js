@@ -23,6 +23,16 @@ form.addEventListener('submit',event => {
     let category = form.elements['category'];
     let releaseyear = form.elements['releaseyear'];
     let comment = form.elements['comment'];
+
+    //Error Checking
+    let albumartistError = document.getElementById('albumartist-error');
+    if (albumartist.value.length < 1 || albumartist.value.length > 50) {
+            albumartistError.textContent = 'Invalid Entry';
+            albumartistError.style.color = 'red';
+            albumartist.style.borderColor = 'red';
+            albumartist.focus();
+            event.preventDefault();
+    }
     
     let posting = {
         albumartist: albumartist.value,

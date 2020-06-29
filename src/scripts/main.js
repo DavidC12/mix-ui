@@ -1,28 +1,27 @@
 'use strict';
 let Album = require('./album');
-//let Compilation = require('./album');
-let mockDB = require('./mockDB');
+let Track = require('./track');
+let AlbumRepository = require('./albumRepository');
+let TrackRepository = require('./trackRepository');
 
 //Set up the mock module object
 let theVerdict = new Album("Queensryche", "The Verdict", true);
 console.log(theVerdict.toString());
-mockDB.save(theVerdict);
+AlbumRepository.save(theVerdict);
 
 //Now apply to the album
 console.log("Retrieving the album we just saved from the repo...");
 let x = null;
-let anotherVerdict = new Album(x,x,x,mockDB.get());
+let anotherVerdict = new Album(x,x,x,AlbumRepository.get());
 console.log(anotherVerdict.toString());
 
-/*
-theVerdict.setCatalogued(false);
-console.log(theVerdict.toString());
-theVerdict.setCatalogued(true);
-console.log(theVerdict.toString());
+//Set up a track....
+let track = new Track(x, 'Blood of the Levant', 'Album Version');
+console.log("Created track object = " + track.toString());
 
-//Any way we can prohibit a compilation with an artist specified?  Do we care?
-let dmaDance1996 = new Compilation("DMA Dance 1996", false);
-console.log(dmaDance1996.toString());
-dmaDance1996.setCatalogued(true);
-console.log(dmaDance1996.toString());
-*/
+//Add it to the repository
+TrackRepository.save(track);
+let track2 = new Track(TrackRepository.get());
+
+
+
